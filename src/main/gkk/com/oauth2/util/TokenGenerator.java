@@ -1,4 +1,4 @@
-package com.oauth2.TokenGenerator;
+package com.oauth2.util;
 
 import com.oauth2.vo.TokenResultVo;
 import org.springframework.stereotype.Component;

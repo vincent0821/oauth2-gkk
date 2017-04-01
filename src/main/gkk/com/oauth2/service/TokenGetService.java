@@ -1,7 +1,7 @@
 package com.oauth2.service;
 
-import com.oauth2.Exception.FormatException;
-import com.oauth2.TokenGenerator.TokenGenerator;
+import com.oauth2.exception.FormatException;
+import com.oauth2.util.TokenGenerator;
 import com.oauth2.vo.TokenRequestVo;
 import com.oauth2.vo.TokenResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class TokenGetService {
     @Autowired
     TokenGenerator tokenGenerator;
 
-    public TokenResultVo getToken(TokenRequestVo requestVo) {
+    public TokenResultVo getToken(TokenRequestVo requestVo) throws FormatException {
         checkEmpty(requestVo);
 
         String client_id = requestVo.getClient_id();
@@ -30,7 +30,7 @@ public class TokenGetService {
         return new TokenResultVo();
     }
 
-    private void checkEmpty(TokenRequestVo requestVo) {
+    private void checkEmpty(TokenRequestVo requestVo) throws FormatException {
         if(StringUtils.isEmpty(requestVo.getClient_id())){
             throw new FormatException("client_id is empty");
         }

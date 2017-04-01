@@ -1,6 +1,6 @@
 package com.oauth2.service;
 
-import com.oauth2.Exception.FormatException;
+import com.oauth2.exception.FormatException;
 import com.oauth2.vo.AuthorizationRequestVo;
 import com.oauth2.vo.AuthorizationResponseVo;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ public class AuthorizationService {
 
 
 
-    public AuthorizationResponseVo authorize(AuthorizationRequestVo requestVo) {
+    public AuthorizationResponseVo authorize(AuthorizationRequestVo requestVo) throws FormatException {
         checkEmpty(requestVo);
 
         //授权码模式
@@ -44,7 +44,7 @@ public class AuthorizationService {
         return new AuthorizationResponseVo();
     }
 
-    private void checkEmpty(AuthorizationRequestVo requestVo) {
+    private void checkEmpty(AuthorizationRequestVo requestVo) throws FormatException {
         if (StringUtils.isEmpty(requestVo.getState())) {
             throw new FormatException("state is empty");
         }

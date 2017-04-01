@@ -5,6 +5,8 @@ import java.util.Map;
 
 /**
  * Created by gongkuaikuai on 2017/4/1.
+ * 作为数据源。
+ * map中的键为clientId，值为授权code。
  */
 public class AuthorizationHolder {
     static Map<String,String> clientIdMap = new HashMap<>();

@@ -1,7 +1,9 @@
 package com.oauth2.controller;
 
+import com.oauth2.exception.FormatException;
 import com.oauth2.service.AuthorizationService;
 import com.oauth2.vo.AuthorizationRequestVo;
+import com.oauth2.vo.AuthorizationResponseVo;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * 处理授权请求
  * Created by gongkuaikuai on 2017/4/1.
  */
 @RestController
@@ -39,8 +42,13 @@ public class AuthorizationController {
 
         AuthorizationRequestVo requestVo = new AuthorizationRequestVo(client_id,redirect_uri,response_type,scope,state);
 
-        return authorizationService.authorize(requestVo).toString();
-
+        String result;
+        try{
+            result = authorizationService.authorize(requestVo).toString();
+        }catch (FormatException e){
+            result = e.getMessage();
+        }
+        return result;
     }
 
 }
