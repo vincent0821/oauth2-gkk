@@ -1,10 +1,12 @@
 # oauth2-gkk
 
+
+主要分两步：
 1.客户端从服务端获得授权，并保存授权码。	
 	验证：如果服务端拥有客户端的client-id，就认为客户端可有此权限。
 2.客户端根据授权码去服务端获得token。
 	验证：如果服务端持有的授权code和客户端的授权code相同，就认为客户端有此权限。
-  
+
 授权请求：
 http://localhost:8080/oauth/authorize/code?response_type=code&client_id=2882303761517520186&redirect_uri=http://www.example.com&scope=1%204&state=emhlbmNoYW8gcGFzc3BvcnQgb2F1dGg=
 
