@@ -11,9 +11,7 @@
 	
 
 授权请求：  
-
 http://localhost:8080/oauth/authorize/code?response_type=code&client_id=2882303761517520186&redirect_uri=http://www.example.com&scope=1%204&state=emhlbmNoYW8gcGFzc3BvcnQgb2F1dGg=
 
 token请求（其中最后一个请求参数code要根据‘授权请求’响应中的code做修改）：  
-
 http://localhost:8080/oauth/authorize／token?client_id=2882303761517520186&client_secret=CLIENT_SECRET&grant_type=authorization_code&redirect_uri=www.example.com&code=947484979
