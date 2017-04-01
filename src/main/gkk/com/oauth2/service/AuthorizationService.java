@@ -1,8 +1,8 @@
-package com.oauth2gkk.service;
+package com.oauth2.service;
 
-import com.oauth2gkk.Exception.FormatException;
-import com.oauth2gkk.vo.AuthorizationRequestVo;
-import com.oauth2gkk.vo.AuthorizationResponseVo;
+import com.oauth2.Exception.FormatException;
+import com.oauth2.vo.AuthorizationRequestVo;
+import com.oauth2.vo.AuthorizationResponseVo;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

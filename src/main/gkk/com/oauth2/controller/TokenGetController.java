@@ -1,7 +1,7 @@
-package com.oauth2gkk.controller;
+package com.oauth2.controller;
 
-import com.oauth2gkk.service.TokenGetService;
-import com.oauth2gkk.vo.TokenRequestVo;
+import com.oauth2.service.TokenGetService;
+import com.oauth2.vo.TokenRequestVo;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

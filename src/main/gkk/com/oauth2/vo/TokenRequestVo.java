@@ -1,4 +1,4 @@
-package com.oauth2gkk.vo;
+package com.oauth2.vo;
 
 /**
  * Created by gongkuaikuai on 2017/4/1.

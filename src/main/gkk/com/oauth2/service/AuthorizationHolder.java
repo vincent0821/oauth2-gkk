@@ -1,4 +1,4 @@
-package com.oauth2gkk.service;
+package com.oauth2.service;
 
 import java.util.HashMap;
 import java.util.Map;

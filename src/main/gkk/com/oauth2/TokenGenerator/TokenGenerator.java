@@ -1,6 +1,6 @@
-package com.oauth2gkk.TokenGenerator;
+package com.oauth2.TokenGenerator;
 
-import com.oauth2gkk.vo.TokenResultVo;
+import com.oauth2.vo.TokenResultVo;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;

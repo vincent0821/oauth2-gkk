@@ -1,13 +1,11 @@
-package com.oauth2gkk.controller;
+package com.oauth2.controller;
 
-import com.oauth2gkk.service.AuthorizationService;
-import com.oauth2gkk.vo.AuthorizationRequestVo;
-import com.oauth2gkk.vo.AuthorizationResponseVo;
+import com.oauth2.service.AuthorizationService;
+import com.oauth2.vo.AuthorizationRequestVo;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;

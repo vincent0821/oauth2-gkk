@@ -1,9 +1,9 @@
-package com.oauth2gkk.service;
+package com.oauth2.service;
 
-import com.oauth2gkk.Exception.FormatException;
-import com.oauth2gkk.TokenGenerator.TokenGenerator;
-import com.oauth2gkk.vo.TokenRequestVo;
-import com.oauth2gkk.vo.TokenResultVo;
+import com.oauth2.Exception.FormatException;
+import com.oauth2.TokenGenerator.TokenGenerator;
+import com.oauth2.vo.TokenRequestVo;
+import com.oauth2.vo.TokenResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

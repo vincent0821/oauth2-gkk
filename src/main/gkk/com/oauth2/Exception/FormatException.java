@@ -1,4 +1,4 @@
-package com.oauth2gkk.Exception;
+package com.oauth2.Exception;
 
 /**
  * Created by gongkuaikuai on 2017/4/1.
