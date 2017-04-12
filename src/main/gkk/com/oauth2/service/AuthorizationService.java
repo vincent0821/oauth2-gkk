@@ -14,8 +14,6 @@ import java.util.*;
 @Service
 public class AuthorizationService {
 
-
-
     public AuthorizationResponseVo authorize(AuthorizationRequestVo requestVo) throws FormatException {
         checkEmpty(requestVo);
 
@@ -32,8 +30,8 @@ public class AuthorizationService {
                 //默认授权码模式的type
                 responseVo.setGrant_type("authorization_code");
                 //生成授权码，并存储在系统中
-                String code = new Random().nextInt()+"";
-                AuthorizationHolder.clientIdMap.put(requestVo.getClient_id(),code);
+                String code = new Random().nextInt() + "";
+                AuthorizationHolder.clientIdMap.put(requestVo.getClient_id(), code);
                 responseVo.setCode(code);
                 //返回
                 return responseVo;
